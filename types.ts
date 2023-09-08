@@ -12,3 +12,17 @@ export interface IProduct {
 
   removeProduct(id: number): void;
 }
+
+////////////////////////////////////////////////
+
+export interface UserType {
+  email: string;
+  password: string;
+  admin: boolean;
+}
+
+export interface IUser {
+  login(user: UserType): boolean;
+  signUp(user: UserType): boolean;
+  getUsers(): UserType[];
+}
