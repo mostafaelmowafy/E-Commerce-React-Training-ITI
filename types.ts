@@ -6,7 +6,9 @@ export interface ProductType {
 }
 
 export interface IProduct {
-  getProduct(): ProductType[];
+  getAllProducts(): ProductType[];
+
+  getProduct(id: number): ProductType | undefined;
 
   createProduct(prodcut: ProductType): void;
 
