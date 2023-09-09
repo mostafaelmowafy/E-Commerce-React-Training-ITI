@@ -3,6 +3,7 @@ export interface ProductType {
   name: string;
   discreption: string;
   image: string;
+  price: number;
 }
 
 export interface IProduct {
@@ -27,4 +28,21 @@ export interface IUser {
   login(user: UserType): boolean;
   signUp(user: UserType): boolean;
   getUsers(): UserType[];
+}
+
+///////////////////////////////////
+
+export interface cartType {
+  products: {
+    id: ProductType["id"];
+    name: ProductType["name"];
+    price: ProductType["price"];
+  }[];
+  totalPrice: number;
+}
+
+export interface ICart {
+  addToCart(prodcut: ProductType): boolean;
+  removeFromCart(id: ProductType["id"]): boolean;
+  getCart(): cartType;
 }
