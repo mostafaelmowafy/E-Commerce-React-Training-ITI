@@ -8,14 +8,18 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Product from "./pages/Product";
 import NavBar from "./components/Navbar/Navbar";
+import Gallery from "./pages/gallary";
+import './module.css'
 function App() {
   return (
     <div>
       <NavBar />
-
       <Switch>
         <Route path="/">
           <Home />
+        </Route>
+        <Route path="/gallary/:categorie">
+          <Gallery/>
         </Route>
         <Route path="/about">
           <About />
@@ -32,7 +36,7 @@ function App() {
         <Route path="/dashboard">
           <Dashboard />
         </Route>
-        <Route path="/product">
+        <Route path="/product/:id">
           <Product />
         </Route>
       </Switch>
