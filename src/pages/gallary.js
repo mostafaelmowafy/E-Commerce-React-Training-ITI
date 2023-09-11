@@ -17,7 +17,7 @@ class Gallery extends Component{
                         this.state.AllProduct.map((e,i)=>{
                             return(
                                 <div class='m-3 'key={e.id} >
-                                    <img src={e.image} alt="T-Shirt" style={{ width:"100%", height:"20vw", objectFit:"cover" }}/>
+                                    <img src={e.image} alt="T-Shirt"/>
                                     <p>
                                         <br /><b>Product Name: </b>{e.name} <br/>
                                         <b>Price: </b>{e.price}

@@ -23,14 +23,14 @@ class Product extends Component{
       <>
         <div class="card mb-3 mt-5" >
           <div class="row g-0">
-            <div class="col-md-8">
+            <div class="col-8">
               <div class="card-body">
                 <h2 class="card-title">{this.state.product.name}</h2>
                 <p class="card-text">{this.state.product.discreption}</p>
                 <hr />
                 <p class="card-text"><b class="text-body-secondary">{this.state.product.price}$</b></p>
                 <hr />
-                <div class="d-flex my-4">
+                <div class="d-flex my-4 justify-content-around">
                   <div class="col-1 d-flex flex-column align-items-center text-center">                          
                     <div> 
                       <img src="https://m.media-amazon.com/images/G/42/A2I-Convert/mobile/IconFarm/icon-cod._CB638858551_.png" style={{height:"35px",width:"35px"}} alt="Cash on <br> Delivery"/> 
@@ -68,7 +68,7 @@ class Product extends Component{
                 <button class="btn btn-primary" onClick={this.AddCard}>Add To Cart</button>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-4" id="indGallary">
               <img src={this.state.product.img} alt="T-Shirt" class="img-fluid rounded-start cover float-end" style={{ height:"40vw", objectFit:"contain flot" }}/>
             </div>
           </div>
